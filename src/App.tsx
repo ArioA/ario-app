@@ -44,10 +44,10 @@ function App() {
                       target="_blank"
                     >
                       <LinkedInLogoIcon />
-                    </Link>{" "}
+                    </Link>
                     <Link href="https://github.com/ArioA/" target="_blank">
                       <GitHubLogoIcon />
-                    </Link>{" "}
+                    </Link>
                   </Box>
                 </Flex>
                 <Separator my="3" size="4" />
