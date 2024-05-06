@@ -30,11 +30,18 @@ function App() {
                   <Box>
                     <Heading as="h5">Ario's site</Heading>{" "}
                   </Box>
-                  <Box style={{ marginLeft: "auto" }}>
+                  <Box
+                    style={{
+                      marginLeft: "auto",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      columnGap: "6px",
+                    }}
+                  >
                     <Link
                       href="https://www.linkedin.com/in/arioaliabadi/"
                       target="_blank"
-                      style={{ verticalAlign: "middle" }}
                     >
                       <LinkedInLogoIcon />
                     </Link>{" "}
@@ -45,13 +52,13 @@ function App() {
                 </Flex>
                 <Separator my="3" size="4" />
                 <Flex gap="3" align="center">
-                  Themes
+                  Where
                   <Separator orientation="vertical" />
-                  Primitives
+                  is the
                   <Separator orientation="vertical" />
-                  Icons
+                  Love
                   <Separator orientation="vertical" />
-                  Colors
+                  Mate
                 </Flex>
               </Text>
             </Section>
