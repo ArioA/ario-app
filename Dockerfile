@@ -21,12 +21,15 @@ FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
 
-RUN bun add serve
-
 # [optional] tests & build
 ENV NODE_ENV=production
 RUN bun run build
 
+# copy production dependencies and source code into final image
+FROM base AS release
+COPY --from=install /temp/prod/node_modules node_modules
+COPY --from=prerelease /usr/src/app/dist/ ./dist
+
 # run the app
 USER bun
-CMD [ "bunx", "serve", "./dist" ]
+ENTRYPOINT [ "bunx", "serve", "./dist"]
