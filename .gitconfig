@@ -1,0 +1,10 @@
+[user]
+	name = ArioA
+	email = ario.aliabadi@gmail.com
+[credential "https://github.com"]
+        username = ArioA
+
+[core]
+    askPass = true
+[credential]
+	helper = osxkeychain
